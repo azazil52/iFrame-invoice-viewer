@@ -1,0 +1,317 @@
+.red_highlight {
+	color: red;
+}
+.green_highlight {
+	color: #019C01;
+}
+.master_title {
+	text-align: center;
+	margin-bottom: 5%;
+	font-size: 75px;
+	padding: 0;
+	color: #334674;
+}
+.master_description {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+}
+#master_container {
+	/*border: 1px solid black;*/
+}
+.general_description_section {
+	border: 3px outset black;
+	background-color: white;
+	padding: 2%;
+	/*border-style: outset;*/
+}
+.sub_title {
+	text-align: center; 
+	margin-top: 2%;
+}
+.pay_now_section, .pay_later_section {
+	width: 100%;
+	margin: 0 auto;
+	float: left;
+	clear: both;
+}
+.pay_later_section {
+	margin-bottom: 2%;  
+}
+/* The gradiant I am using for the boxes is a combination of the passive,active, and hover colors */
+.credit_card_box, .direct_debit_box {
+	background-color: #3A70B0; /* For browsers that do not support gradients */
+  	background: -webkit-radial-gradient(#3A70B0, #3A45B0, #272E76); /* Safari 5.1 to 6.0 */
+  	background: -o-radial-gradient(#3A70B0, #3A45B0, #272E76); /* For Opera 11.6 to 12.0 */
+  	background: -moz-radial-gradient(#3A70B0, #3A45B0, #272E76); /* For Firefox 3.6 to 15 */
+  	background: radial-gradient(#3A70B0, #3A45B0, #272E76); /* Standard syntax */
+  	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-vendor-animation-duration: 3s;  
+  	-vendor-animation-delay: 5s;    
+	text-align: center;
+	color: white;
+	font-size: 20px;
+	width: 40%;
+	padding: 3%;
+	margin: 1% 5% 2% 5%;
+	border-radius: 5%;
+	float: left;
+}
+.credit_card_box:hover, .direct_debit_box:hover {
+	background-color: #3A45B0;
+	background: -webkit-radial-gradient(#3A70B0, #3A70B0, #3A70B0); /* Safari 5.1 to 6.0 */
+  	background: -o-radial-gradient(#3A70B0, #3A70B0, #3A70B0); /* For Opera 11.6 to 12.0 */
+  	background: -moz-radial-gradient(#3A70B0, #3A70B0, #3A70B0); /* For Firefox 3.6 to 15 */
+  	background: radial-gradient(#3A70B0, #3A70B0, #3A70B0); /* Standard syntax */
+	cursor: pointer;
+}
+.credit_card_box:active, .direct_debit_box:active {
+	background-color: #272E76;
+	background: -webkit-radial-gradient(#272E76, #272E76, #272E76); /* Safari 5.1 to 6.0 */
+  	background: -o-radial-gradient(#272E76, #272E76, #272E76); /* For Opera 11.6 to 12.0 */
+  	background: -moz-radial-gradient(#272E76, #272E76, #272E76); /* For Firefox 3.6 to 15 */
+  	background: radial-gradient(#272E76, #272E76, #272E76); /* Standard syntax */
+}
+/*	Testing CSS */
+#admin-table {
+	margin: 100px auto;
+	text-align: center;
+	padding-left: 5%;
+	padding-top: 7%;
+	width: 892px; /*Total computed width = 222 x 3 + 226*/
+}
+
+#admin-table .plan {
+	font: 12px 'Lucida Sans', 'trebuchet MS', Arial, Helvetica;
+	text-shadow: 0 1px rgba(255,255,255,.8);
+	background: #FFF;
+	border: 1px solid #DDD;
+	color: #333;
+	padding: 20px;
+	width: 180px; /* plan width = 180 + 20 + 20 + 1 + 1 = 222px*/
+	float: left;
+	position: relative;
+}
+
+#admin-table #most-popular {
+	z-index: 2;
+	top: -13px;
+	border-width: 3px;
+	padding: 30px 20px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	/*This will add a cool looking shadow to the right of the div*/
+	-moz-box-shadow: 20px 0 10px -10px rgba(0, 0, 0, .15), -20px 0 10px -10px rgba(0, 0, 0, .15);
+	-webkit-box-shadow: 20px 0 10px -10px rgba(0, 0, 0, .15), -20px 0 10px -10px rgba(0, 0, 0, .15);
+	box-shadow: 20px 0 10px -10px rgba(0, 0, 0, .15), -20px 0 10px -10px rgba(0, 0, 0, .15);
+}
+
+#admin-table .plan:nth-child(1){
+	-moz-border-radius: 5px 0 0 5px;
+	-webkit-border-radius: 5px 0 0 5px;
+	border-radius: 5px 0 0 5px;
+}
+
+#admin-table .plan:nth-child(4) {
+	-moz-border-radius: 0 5px 5px 0;
+	-webkit-border-radius: 0 5px 5px 0;
+	border-radius: 0 5px 5px 0;
+}
+
+#admin-table h3 {
+	font-size: 20px;
+	font-weight: normal;
+	padding: 20px;
+	margin: -20px -20px 50px -20px;
+	background-color: #EEE;
+	background-image: -moz-linear-gradient(#fff,#eee);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE));
+	background-image: -webkit-linear-gradient(#fff, #eee);
+	background-image: -o-linear-gradient(#fff, #eee);
+	background-image: -ms-linear-gradient(#fff, #eee);
+	background-image: linear-gradient(#fff, #eee);  
+}
+/* This will make the most popular option slightly different in color*/
+#admin-table #most-popular h3 {
+	background-color: #DDD;
+	background-image: -moz-linear-gradient(#eee,#ddd);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ddd));    
+	background-image: -webkit-linear-gradient(#eee, #ddd);
+	background-image: -o-linear-gradient(#eee, #ddd);
+	background-image: -ms-linear-gradient(#eee, #ddd);
+	background-image: linear-gradient(#eee, #ddd);
+	margin-top: -30px;
+	padding-top: 30px;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0; 
+}
+
+#admin-table .plan:nth-child(1) h3{
+	-moz-border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	border-radius: 5px 0 0 0; 
+}
+
+#admin-table .plan:nth-child(4) h3 {
+	-moz-border-radius: 0 5px 0 0;
+	-webkit-border-radius: 0 5px 0 0;
+	border-radius: 0 5px 0 0; 
+}
+
+/*This will make the circle around the pictures*/
+#admin-table h3 span {
+	display: block;
+	font: bold 25px/100px Georgia, Serif;
+	color: #777;
+	background: #FFF;
+	border: 5px solid #FFF;
+	height: 150px;
+	width: 150px;
+	margin: 10px auto -65px;
+	-moz-border-radius: 150px; 
+	-webkit-border-radius: 150px; 
+	border-radius: 150px; 
+	-moz-box-shadow: 0 5px 20px #DDD inset, 0 3px 0 #999 inset;
+	-webkit-box-shadow: 0 5px 20px #DDD inset, 0 3px 0 #999 inset;
+	box-shadow: 0 5px 20px #DDD inset, 0 3px 0 #999 inset;
+}
+
+#admin-table ul {
+	margin: 20px 0 0 0;
+	padding: 0;
+	/*This will remove the bullets*/
+	list-style: none;
+}
+
+#admin-table li {
+	border-top: 1px solid #DDD;
+	padding: 10px 0;
+}
+
+#admin-table .signup {
+	position: relative;
+	padding: 8px 20px;
+	margin: 20px 0 0 0;
+	color: #FFF;
+	font: bold 14px Arial, Helvetica;
+	text-transform: uppercase;
+	text-decoration: none;
+	display: inline-block;
+	background-color: #72CE3F;
+	background-image: -moz-linear-gradient(#72ce3f, #62bc30);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#72ce3f), to(#62bc30));    
+	background-image: -webkit-linear-gradient(#72ce3f, #62bc30);
+	background-image: -o-linear-gradient(#72ce3f, #62bc30);
+	background-image: -ms-linear-gradient(#72ce3f, #62bc30);
+	background-image: linear-gradient(#72ce3f, #62bc30);
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;     
+	text-shadow: 0 1px 0 rgba(0,0,0,.3);        
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .5), 0 2px 0 rgba(0, 0, 0, .7);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5), 0 2px 0 rgba(0, 0, 0, .7);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .5), 0 2px 0 rgba(0, 0, 0, .7);
+}
+
+#admin-table .signup:hover {
+	background-color: #62BC30;
+	background-image: -moz-linear-gradient(#62bc30, #72ce3f);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#62bc30), to(#72ce3f));      
+	background-image: -webkit-linear-gradient(#62bc30, #72ce3f);
+	background-image: -o-linear-gradient(#62bc30, #72ce3f);
+	background-image: -ms-linear-gradient(#62bc30, #72ce3f);
+	background-image: linear-gradient(#62bc30, #72ce3f);  
+}
+
+#admin-table .signup:active, #admin-table .signup:focus {
+	background: #62BC30;
+	top: 2px;
+	-moz-box-shadow: 0 0 3px rgba(0, 0, 0, .7) inset;
+	-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .7) inset;
+	box-shadow: 0 0 3px rgba(0, 0, 0, .7) inset; 
+}
+
+.clear:before, .clear:after {
+	content:"";
+	display: table;
+}
+
+.clear:after {
+	clear: both;
+}
+.clear {
+	zoom: 1;
+}
+
+#selector {
+	padding-left: 150px;
+}
+/* The outline for the monthly payment breakdown*/
+ul.monthly_invoice_description {
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	margin-right: 12%;
+	list-style: none;
+	font-size: 15px;
+	padding: 0;
+}
+ul.monthly_invoice_description ul {
+	margin: 0 0 0 2em;
+}
+ul.monthly_invoice_description a {
+	position: relative;
+	/* This may screw up the float you have on invoice_amount_details*/
+	display: block;
+	padding: .4em .4em .4em 2em;
+	*padding: .4em;
+	margin: .5em 0;
+	background: #4a90e2;
+	color: #000;
+	text-decoration: none;
+	-moz-border-radius: .3em;
+	-webkit-border-radius: .3em;
+	border-radius: 10em;
+	transition: all .2s ease-in-out;
+}
+b.invoice_amount_details {
+	/*color: #00FF00;*/
+	color: #00E100;
+	float: right;
+	padding-right: 10%;
+}
+ul.monthly_invoice_description a:hover {
+	background: #D6D4D4;
+	text-decoration: none;
+	transform: scale(1.1);
+}
+ul.monthly_invoice_description a:hover b.invoice_amount_details {
+	color: red;
+}
+ul.portal-list {
+    margin-bottom: 20px;
+}
+/*@media (min-width:601px) {
+    
+    i.material-icons {
+	    padding:10px;
+	    margin:5px;
+	    font-size:2rem;
+    }
+}
+
+@media (min-width:993px) {
+    i.material-icons {
+        padding:20px;
+        margin:10px;
+        font-size:4rem;
+    }
+    i.material-icons:after {
+        border-width:3px;
+        top:-3px;
+        left:-3px;
+    }
+}*/

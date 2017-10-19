@@ -1,0 +1,1 @@
+angular.module("cart",["ngRoute"]).config(["$routeProvider",function(r){r.when("/cart",{templateUrl:"public/cart/cart.html",controller:"CartCtrl"})}]);
