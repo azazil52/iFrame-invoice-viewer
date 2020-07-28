@@ -1,0 +1,154 @@
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+}
+/*LOGOUT BUTTON START*/
+input.logout {
+  background: url('https://dh3vbjnk0bnfa.cloudfront.net/static/centralauth/images/btn-login.png') no-repeat 5px 5px #484b4f;
+  float: right;
+  cursor: pointer;
+  border-radius: 50px;
+  padding-left: 30px;
+  padding: 10px 20px 10px 0;
+  margin: 20px 0px 0px 2px;
+  color: White;
+  font-size: 14px;
+  text-align: left;
+  text-indent: 40px;
+  display: block;
+  /*margin: 0 auto;*/
+  /* Animations: */
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-duration: .4s;
+  -webkit-transition-property: all;
+  -moz-transition-timing-function: ease-in-out;
+  -moz-transition-duration: .4s;
+  -moz-transition-property: all;
+}
+input.logout:hover {
+  background-image: url('https://dh3vbjnk0bnfa.cloudfront.net/static/centralauth/images/btn-login-hover.png');
+  background-position: 70px 5px;
+  text-indent: 20px;
+}
+/*LOGOUT BUTTON END*/
+/*BACK BUTTON CSS START*/
+.back_btn {
+  float: left;
+  clear: both;
+  color: white;
+  font-size: 18px;
+  background-color: #E46151;
+  margin: 20px 10px 40px 10px;
+  padding: 10px 20px 10px 20px;
+  box-shadow: 2px 2px 2px 2px #000;
+  border-radius: 5px;
+}
+.back_btn:hover {
+  background-color: #CF5849;
+  color: black;
+  cursor: default;
+  box-shadow: inset 0px 0px 2px 2px #000;
+}
+.back_btn:active {
+  box-shadow: inset 0px 0px 4px 4px #000;
+}
+/*BACK BUTTON CSS END*/
+.master_payment_div {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 2%;
+}
+.portal-heading {
+    font-size: 32px;
+    font-weight: 100;
+}
+
+img.portal-list {
+    display: block;
+    margin-top: 20px;
+}
+
+ul.portal-list {
+    margin: 0;
+    padding: 0;
+    border-radius: 4px;
+    border: 1px solid #929292;
+    display: block;
+    overflow: auto;
+    margin-bottom: 40px;
+}
+
+ul.portal-list li {
+    display: block;
+    float: none;
+    border-bottom: 1px solid #929292;
+    text-transform: uppercase;
+    padding: 6px;
+    font-size: 11px;
+}
+
+ul.portal-list li:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+ul.portal-list li:last-child {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-right: none;
+    border-bottom: none;
+}
+
+ul.portal-list li.active {
+    color: #4A90E2;
+    background: #000000;
+}
+
+ul.portal-list li.final {
+    background: #15A085;
+    color: #fff;
+}
+
+p.lg {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.form-title.portal {
+    margin-bottom: 0;
+}
+
+.input-group-addon {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    background: #4A90E2;
+    border: none;
+    border-radius: 0;
+    padding: 10px 15px;
+}
+
+ul.review-list {
+    margin: 0;
+    padding: 0;
+}
+
+ul.review-list li {
+    font-size: 22px;
+    color: #4A90E2;
+    display: block;
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+ul.review-list li.message {
+    color: #000;
+    margin-top: 40px;
+}
+
+hr.dark {
+    border-color: #6f6f6f;
+    margin: 45px 0;
+}

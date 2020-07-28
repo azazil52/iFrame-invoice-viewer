@@ -1,0 +1,79 @@
+
+<a routerLink="/login">
+  <input type="button" value="Log out" class="logout" />
+</a>
+
+<div class="master_payment_div" [@fadeInAnimation]> 
+	<section class="portal-content">
+		<div class="container extra-bot extra-top">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="portal-heading hidden-xs">Client Payment Portal</h1>
+					<p>Enter your invoice number and the amount you wish to pay.</p>
+					<p>Accepted Amounts: $1.00-$49,999.99</p>
+					<ul class="portal-list">
+						<li class="active">invoice details <i class="fa fa-circle-o"></i></li>
+						<li>Monthly Payment details <i class="fa fa-circle-o"></i></li>
+						<li>review <i class="fa fa-circle-o"></i></li>
+					</ul>
+					<h1 class="portal-heading hidden-xs">Terms and Conditions</h1>
+					<p>Please view our terms and conditions</p>
+				</div>
+				<div class="col-md-12">
+				
+				<form id="portal-form" method="post" action="">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="text" class="form-control" id="invoiceNumber" name="invoiceNumber" placeholder="Invoice Number*" tabindex="1">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<div class="input-group">
+									<span class="input-group-addon" id="basic-addon1">$</span>									  
+									<input type="text" name="amount" id="amount" class="form-control" placeholder="NO COMMAS" aria-describedby="basic-addon1" tabindex="2">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<input type="text" class="form-control" name="firstname" placeholder="First*" tabindex="3">
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" name="lastname" placeholder="Last*" tabindex="4">
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" id="phone" name="phone" placeholder="Phone*" tabindex="5">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<input type="email" class="form-control" name="email" placeholder="Email Address*" tabindex="6">
+								</div>
+								<div class="form-group">
+									<textarea class="form-control" name="message" placeholder="OPTIONAL Message" tabindex="7"></textarea>
+								</div>
+								<div class="form-group">
+									<label for="terms">
+										<input type="checkbox" class="form-control" id="terms" name="terms" tabindex="8" />I agree to the Terms and Conditions outlined on this page.
+									</label>
+								</div>
+								<div class="form-group">
+									<input type="hidden" name="siteUrl" value="<?php echo site_url(); ?>/">
+									<a routerLink="/monthly-validation">
+										<input type="button" name="submitForm" class="btn-submit btn btn-primary pull-right" value="Continue">
+									</a>
+									<a routerLink="/checkout">
+										<input type="button" name="clearForm" class="btn-submit btn btn-primary pull-left" value="Back">
+									</a>
+									<span class="clearfix"></span>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

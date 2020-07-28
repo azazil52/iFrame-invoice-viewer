@@ -1,0 +1,261 @@
+<a routerLink="/">
+    <input type="button" value="Log out" class="logout" />
+</a>
+
+ <!-- **************************** Testing Area ************************************
+         Desctription: This is the area for testing connection with our api and testing
+         of how to handle the data returned by the API.
+    --> 
+    <div class="testing" hidden>
+        <!-- Row title -->
+        <main class="row title">
+            <ul class="invoice-content">
+                <li>Invoice #</li>
+                <li>Hours</li>
+                <li><span class="title-hide">#</span> Date</li>
+                <li>Balance</li>
+                <li>Status</li>
+                <li>Action</li>
+            </ul>
+        </main>
+        <!-- Row 3 -->
+        <article class="row nfl">
+            <ul class="invoice-content">
+                <li><a href="#">NHL</a></li>
+                <li>$50</li>
+                <li>12</li>
+                <li>48</li>
+                <li>12:00ET</li>
+                <li>
+                    <div class="btn_pay">
+                        <i class="fa fa-credit-card" aria-hidden="true"></i> <b>Pay</b>
+                     </div>
+                </li>
+            </ul>
+            <ul class="more-content">
+                <li>This 1665-player contest boasts a $300,000.00 prize pool and pays out the top 300 finishing positions. First place wins $100,000.00. Good luck!</li>
+            </ul>
+        </article>
+        <!-- Row 4 -->
+        <article class="row mlb update-row">
+            <ul class="invoice-content">
+                <li><a href="#">MLB</a><span class="small">(update)</span></li>
+                <li>$10</li>
+                <li><span class="update1">1</span><span class="update2">2</span></li>
+                <li>10</li>
+                <li>1:00ET</li>
+            </ul>
+            <ul class="more-content">
+                <li>This 1665-player contest boasts a $300,000.00 prize pool and pays out the top 300 finishing positions. First place wins $100,000.00. Good luck!</li>
+            </ul>
+        </article>
+        <!-- Row 5 -->
+        <article class="row mlb">
+            <ul class="invoice-content">
+                <li><a href="#">MLB</a></li>
+                <li>$5</li>
+                <li>48</li>
+                <li>120</li>
+                <li>12:00ET</li>
+            </ul>
+            <ul class="more-content">
+                <li>This 1665-player contest boasts a $300,000.00 prize pool and pays out the top 300 finishing positions. First place wins $100,000.00. Good luck!</li>
+            </ul>
+        </article>
+        <!-- Row 6 -->
+        <article class="row nhl">
+            <ul class="invoice-content">
+                <li><a href="#">NHL</a></li>
+                <li>$50</li>
+                <li>12</li>
+                <li>48</li>
+                <li>12:00ET</li>
+            </ul>
+            <ul class="more-content">
+                <li>This 1665-player contest boasts a $300,000.00 prize pool and pays out the top 300 finishing positions. First place wins $100,000.00. Good luck!</li>
+            </ul>
+        </article>
+        <!-- Row 7 -->
+        <article class="row nhl">
+            <ul class="invoice-content">
+                <li><a href="#">NHL</a></li>
+                <li>$50</li>
+                <li>12</li>
+                <li>48</li>
+                <li>12:00ET</li>
+            </ul>
+            <ul class="more-content">
+                <li>This 1665-player contest boasts a $300,000.00 prize pool and pays out the top 300 finishing positions. First place wins $100,000.00. Good luck!</li>
+            </ul>
+        </article>
+        <!-- Row 8 -->
+        <article class="row pga">
+            <ul class="invoice-content">
+                <li><a href="#">PGA</a></li>
+                <li>$50</li>
+                <li>12</li>
+                <li>48</li>
+                <li>11:00ET</li>
+            </ul>
+            <ul class="more-content">
+                <li>This 1665-player contest boasts a $300,000.00 prize pool and pays out the top 300 finishing positions. First place wins $100,000.00. Good luck!</li>
+            </ul>
+        </article>
+        <!-- Row 9 -->
+        <article class="row pga">
+            <ul class="invoice-content">
+                <li><a href="#">PGA</a></li>
+                <li>$50</li>
+                <li>12</li>
+                <li>48</li>
+                <li>11:00ET</li>
+            </ul>
+            <ul class="more-content">
+                <li>This 1665-player contest boasts a $300,000.00 prize pool and pays out the top 300 finishing positions. First place wins $100,000.00. Good luck!</li>
+            </ul>
+        </article>
+        <!-- Row 10 -->
+        <article class="row pga">
+            <ul class="invoice-content">
+                <li><a href="#">PGA</a></li>
+                <li>$50</li>
+                <li>12</li>
+                <li>48</li>
+                <li>11:00ET</li>
+            </ul>
+            <ul class="more-content">
+                <li>This 1665-player contest boasts a $300,000.00 prize pool and pays out the top 300 finishing positions. First place wins $100,000.00. Good luck!</li>
+            </ul>
+        </article>
+        <!-- Row 11 -->
+        <article class="row mlb">
+            <ul class="invoice-content">
+                <li><a href="#">MLB</a></li>
+                <li>$10</li>
+                <li>1</li>
+                <li>10</li>
+                <li>1:00ET</li>
+            </ul>
+            <ul class="more-content">
+                <li>This 1665-player contest boasts a $300,000.00 prize pool and pays out the top 300 finishing positions. First place wins $100,000.00. Good luck!</li>
+            </ul>
+        </article>
+    </div>
+
+<section class="invoice_viewer_screen" [@fadeInAnimation]>  
+   <!-- The Payment Notification Bar -->
+   <div class="notification-container" hidden>
+      <ul>
+         <li>
+            <div class="notification-title"><b>Total Hours to Date</b></div>
+            <div class="notification-content" id="notification-hours"><b>999,999</b></div>
+         </li>
+         <li>
+            <div class="notification-title"><b>Total Amount Charged</b></div>
+            <div class="notification-content" id="notification-total"><b>$99,999,999.99</b></div>
+         </li>
+         <li>
+            <div class="notification-title"><b>Total Amount Paid</b></div>
+            <div class="notification-content" id="notification-paid"><b>$99,999,999.99</b></div>
+         </li>
+         <li>
+            <div class="notification-title"><b>Total Amount Unpaid</b></div>
+            <div class="notification-content" id="notification-unpaid"><b>$99,999,999.99</b></div>
+         </li>
+      </ul>
+   </div>
+
+   <div class="count_dropdown" hidden>
+      <div class="dropdown_text dropdown_closed" id="dropdown_id">
+         <b>Total Hours and Money Charged to Date</b> <br>
+         <i class="fa fa-chevron-down fa-lg" aria-hidden="true" id="dropdown_icon"></i>
+      </div>
+   </div>
+
+   <!-- The Mockup of Client Screen -->
+   <section class="content gray animate" id="sectionTop" [ngClass]="animateForm">
+      <div class="container" >
+        <div class="col-md-12">
+         <div class="client_name">
+            <i class="fa fa-user fa-lg" aria-hidden="true"></i> Hello, <b class="important_info_green">{{getClientEmail()}}</b> here are your open invoices
+         </div><br>
+         <div class="payment-tabs tabs-style-flip">
+            <nav>
+               <ul>
+                  <li class="tab-current" id="tab1"><a class="tab"><span>Unpaid Invoices</span></a></li>
+                  <li id="tab2"><a class="tab"><span>Paid Invoices</span></a></li>
+               </ul>
+            </nav>
+            <div class="content-wrap">
+               <section id="section-flip-1" class="content-current">
+                  <div id="heading_entry">
+                     <div class="invNum_header"><b>Invoice #</b></div>
+                     <div class="invHours_header"><b>Hours</b></div>
+                     <div class="date_header"><b>Date</b></div>
+                     <div class="total_header"><b>Total</b></div>
+                     <div class="paid_header"><b>Paid</b></div>
+                     <div class="balance_header"><b>Balance</b></div>
+                     <div class="status_header"><b>Status</b></div>
+                     <div class="actions_header"><b>Actions</b></div>
+                  </div><br>
+                  <div class="invoice_list">
+                     <form action="#" method="POST">
+                        <!-- This will generate the rows of entries -->
+                        <div class="entry" *ngFor="let invoice of unPaidInvoices; let i = index">
+                           <div class="invNum"><b>{{invoice.InvoiceNum | number}}</b></div>
+                           <div class="invHours"><b>{{invoice.InvoiceHours}}</b></div>
+                           <div class="date"><b>{{invoice.InvoiceDate}}</b></div>
+                           <div class="total"><b>${{invoice.InvoiceAmount | number}}</b></div>
+                           <div class="paid"><b>${{invoice.InvoiceAdjust | number}}</b></div>
+                           <div class="balance" style="color: red;"><b>${{invoice.InvoiceBalance | number}}</b></div>
+                           <div class="status partial_invoice"><b>Open</b>- Partial Payment</div>
+                           <div class="actions">
+                                 <div class="btn_pay" id="btn_pay{{i}}" (click)="setInvoiceAmount(invoice.InvoiceBalance)">
+                                    <input type="submit" name="pay{{i}}" value="#0" hidden="">
+                                       <i class="fa fa-credit-card" aria-hidden="true"></i> <b>Pay</b>
+                                 </div>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </section>
+                
+               <section id="section-flip-2">
+                  <div id="paid_heading_entry" class="paid_heading_entry">
+                     <div class="invNum_header"><b>Invoice #</b></div>
+                     <div class="invHours_header"><b>Hours</b></div>
+                     <div class="date_header"><b>Date</b></div>
+                     <div class="total_header"><b>Total</b></div>
+                     <div class="paid_header"><b>Paid</b></div>
+                     <div class="balance_header"><b>Balance</b></div>
+                     <div class="status_header"><b>Status</b></div>
+                  </div><br>
+                  <div class="paid_invoice_section" id="paid_invoice_list">
+                     <div class="paid_entry" *ngFor="let paidinvoice of paidInvoices; let i = index">
+                        <div class="invNum"><b>{{paidinvoice.InvoiceNum}}</b></div>
+                        <div class="invHours"><b>{{paidinvoice.InvoiceHours}}</b></div>
+                        <div class="date"><b>{{paidinvoice.InvoiceDate}}</b></div>
+                        <div class="total"><b>${{paidinvoice.InvoiceAmount}}</b></div>
+                        <div class="paid"><b>${{paidinvoice.InvoiceAdjust}}</b></div>
+                        <div class="balance" style="color: red;"><b>${{paidinvoice.InvoiceBalance}}</b></div>
+                        <div class="status closed_invoice"><b>Closed</b>- Full Payment</div>
+                     </div>
+                  </div>
+               </section>
+              
+            </div><!-- /content -->
+         </div><!-- /tabs -->
+      </div>
+      <div class="col-md-12">
+         <!-- Top Master Choice Buttons -->
+         <!-- <div class="button_container">
+           <div class="pay_invoices">
+            <a href="/login">
+              <i class="fa fa-check-square-o" aria-hidden="true"></i> Logout 
+            </a>
+           </div>
+           <div class="error"></div>
+        </div> -->
+     </div>
+  </div>
+</section>

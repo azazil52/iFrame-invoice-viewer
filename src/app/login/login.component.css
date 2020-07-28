@@ -1,0 +1,182 @@
+/*
+	********************************************
+	*										   *
+	*			Login Screen Css			   *
+	*										   *
+	********************************************
+*/
+.loginContainer {
+	text-align: center;
+}
+.loginContainer form {
+	text-align: center;
+	padding-top: 10%;
+}
+
+.loginContainer label{
+	display: block;
+	letter-spacing: 4px;
+	padding-top: 30px;
+	text-align: center;
+}
+/*This will move our label text over the input box*/
+/*Example is written and compiled in SASS so looks different to this*/
+.loginContainer label .label-text{
+	color: #696969;
+	cursor: text;
+	font-size: 20px;
+	line-height: 20px;
+	text-transform: uppercase;
+	-moz-transform: translateY(-34px);
+  	-ms-transform: translateY(-34px);
+  	-webkit-transform: translateY(-34px);
+  	transform: translateY(-34px);
+  	transition: all 0.3s;
+}
+
+.loginContainer label input{
+	background-color: transparent;
+	border: 0;
+	border-bottom: 2px solid #4A4A4A;
+	color: black;
+	font-size: 36px;
+	letter-spacing: -1px;
+	outline: 0;
+	padding: 5px 20px;
+	text-align: center;
+	transition: all 0.3s;
+	width: 200px;
+}
+
+.loginContainer label input:focus{
+	max-width: 100%;
+	width: 400px;
+}
+
+.loginContainer label input:focus + .label-text {
+	color: #F0F0F0;
+	font-size: 13px;
+	-moz-transform: translateY(-74px);
+  	-ms-transform: translateY(-74px);
+  	-webkit-transform: translateY(-74px);
+  	transform: translateY(-74px);
+}
+
+.loginContainer label input:valid + .label-text {
+	font-size: 13px;
+	-moz-transform: translateY(-74px);
+  	-ms-transform: translateY(-74px);
+  	-webkit-transform: translateY(-74px);
+  	transform: translateY(-74px);
+}
+
+.loginContainer button {
+	background-color: #333333;
+	border: 2px solid white;
+	border-radius: 27px;
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+	margin-top: 20px;
+	padding: 15px 30px;
+	text-transform: uppercase;
+	transition: all 200ms;
+}
+
+.loginContainer button:hover, button:focus {
+	background-color: white;
+	color: #333333;
+	outline: 0;
+}
+
+.loginContainer input[type="button"]{
+	background-color: #333333;
+	border: 2px solid white;
+	border-radius: 27px;
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+	margin-top: 20px;
+	padding: 15px 30px;
+	text-transform: uppercase;
+	transition: all 200ms;
+}
+
+.loginContainer input[type="button"]:hover, input[type="button"]:focus {
+	background-color: white;
+	color: #333333;
+	outline: 0;
+}
+
+input {
+	font-size: 1em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: 0;
+	-webkit-appearence: none;
+}
+/*
+	********************************************
+	*										   *
+	*	Password Strength Meter Css			   *
+	*										   *
+	********************************************
+*/
+.arrow{
+    height: 120px;
+    left: 214px;
+    position: absolute;
+    top: 392px;
+    width: 11px;
+
+    /* Defining a smooth CSS3 animation for turning the arrow */
+
+    -moz-transition:0.3s;
+    -webkit-transition:0.3s;
+    -o-transition:0.3s;
+    -ms-transition:0.3s;
+    transition:0.3s;
+
+    /* Putting the arrow in its initial position */
+
+    -moz-transform: rotate(-134deg);
+    -webkit-transform: rotate(-134deg);
+    -o-transform: rotate(-134deg);
+    -ms-transform: rotate(-134deg);
+    transform: rotate(-134deg);
+}
+/* The small piece that goes over the arrow */
+.arrowCap {
+    height: 20px;
+    left: 208px;
+    position: absolute;
+    top: 443px;
+    width: 20px;
+    z-index: 10;
+}
+/*
+	********************************************
+	*										   *
+	*				Testing Css				   *
+	*										   *
+	********************************************
+*/
+div.testing {
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 2%; 
+}
+div.testing h1 {
+	text-align: center;
+}
+div.testing table {
+	width: 100%;
+	border: 1px solid black;
+}
+div.testing table tr {
+	border: 1px solid black;
+}
+div.testing table tr td {
+	padding: 5px;
+	border: 1px solid black;
+}

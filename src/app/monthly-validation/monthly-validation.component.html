@@ -1,0 +1,92 @@
+<a routerLink="/login">
+  <input type="button" value="Log out" class="logout" />
+</a>
+
+<div class="master_payment_div" [@fadeInAnimation]> 
+<section class="content">
+		<div class="container extra-bot extra-top">
+			<div class="row">
+				<!-- For left side items -->
+				<div class="col-md-12">
+					<h1 class="portal-heading">Client Payment Portal</h1>
+					<p>Enter your card details.</p>
+					<ul class="portal-list">
+						<li class="final">invoice details <i class="fa fa-check-circle-o"></i></li>
+						<li class="active">Monthly Payment details <i class="fa fa-circle-o"></i></li>
+						<li>review <i class="fa fa-circle-o"></i></li>
+					</ul>
+					<div class="row">
+						<div class="col-md-12">
+							<!-- These are here for the form testing -->
+							
+							<div class="form-group">
+								<input type="text" maxlength="20" autocomplete="off" class="form-control required" name="account_num" placeholder="Bank Account Number*" tabindex="1">
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<input type="text" maxlength="20" autocomplete="off" class="form-control   required" name="routing_num" placeholder="Routing Number*" tabindex="2">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" maxlength="20" autocomplete="off" class="form-control" name="bank_name" placeholder="Bank Name*" tabindex="3">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" maxlength="20" autocomplete="off" class="form-control" name="bank_branch" placeholder="Bank Branch" tabindex="4">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<form id="portal-form" method="post" action="<?php echo site_url(); ?>/?page_id=214">
+						<div class="row">
+							<div class="col-md-9">
+								<div class="form-group">
+									<input type="text" maxlength="20" autocomplete="off" class="form-control card-number stripe-sensitive required" placeholder="Credit Card Number" tabindex="1">
+								</div>
+								
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<input type="text" maxlength="4" autocomplete="off" class="form-control card-cvc stripe-sensitive required" placeholder="CVC" tabindex="2">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<select class="form-control card-expiry-month stripe-sensitive required" placeholder="Month" tabindex="3">
+										<option value="01">01 - January</option>
+										<option value="02">02 - February</option>
+										<option value="03">03 - March</option>
+										<option value="04">04 - April</option>
+										<option value="05">05 - May</option>
+										<option value="06">06 - June</option>
+										<option value="07">07 - July</option>
+										<option value="08">08 - August</option>
+										<option value="09">09 - September</option>
+										<option value="10">10 - October</option>
+										<option value="11">11 - November</option>
+										<option value="12">12 - December</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<a routerLink="/card-success">
+										<input type="button" name="submitForm" class="btn-submit btn btn-primary pull-right" value="Continue">
+									</a>
+									<a routerLink="/card-validation">
+										<input type="button" name="clearForm" class="btn-submit btn btn-primary pull-left" value="Back">
+									</a>
+									<span class="clearfix"></span>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

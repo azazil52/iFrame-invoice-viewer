@@ -1,0 +1,51 @@
+<div class="container" id = "login_master_contain" [@fadeInAnimation]>
+    <div class="loginContainer">
+        <form class="animate">
+            <label>
+                <input type="text" #emailInput name="email" required />
+                <div class="label-text">Email</div>
+            </label>
+            <label>
+                <input type="password" name="password" id="password" required />
+                <div class="label-text">Password</div>  
+            </label>
+            <input type="button" value="Login" id="loginButton1" class="animated" [ngClass]="animateLogin" (mouseover)="animateLoginButton($event)" (mouseout)="animateLoginButton($event)" (click)="processLogin(emailInput.value)">
+            <input type="button" value="Register" id="registerButton" class="animated" [ngClass]="animateRegister" (mouseover)="animateRegisterButton($event)" (mouseout)="animateRegisterButton($event)">
+        </form>   
+        <p><br /></p>
+    </div>
+    <!-- **************************** Testing Area ************************************
+         Desctription: This is the area for testing connection with our api and testing
+         of how to handle the data returned by the API.
+    --> 
+    <div class="testing" hidden>
+        <h1>Client Login Info</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Client ID</td>
+                    <td>Client Number</td>
+                    <td>Client Name</td>
+                    <td>Client Email</td>
+                    <td>Total Invoice Count</td>
+                    <td>Unpaid Count</td>
+                    <td>Total Hours Charged</td>
+                    <td>Total Amount Paid</td>
+                    <td>Total Amount Unpaid</td>
+                </tr>
+                <tr *ngFor="let client of clients; let i = index">
+                    <td><b>{{i}}</b></td>
+                    <td><b>{{client.ClientNumber}}</b></td>
+                    <td><b>{{client.ClientName}}</b></td>
+                    <td><b>{{client.ClientEmail}}</b></td>
+                    <td><b>{{client.TotalInvoiceCount}}</b></td>
+                    <td><b>{{client.UnpaidCount}}</b></td>
+                    <td><b>{{client.TotalHoursCharged}}</b></td> 
+                    <td><b>{{client.TotalAmountPaid}}</b></td> 
+                    <td><b>{{client.TotalAmountUnPaid}}</b></td> 
+                    <br>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

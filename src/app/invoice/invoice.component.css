@@ -1,0 +1,988 @@
+/*
+	********************************************
+	*										   *
+	*			Invoice Viewer Css			   *
+	*										   *
+	********************************************
+*/
+div.container {
+	/* background-color: gray; */
+}
+#sectionTop {
+	padding-top: 5%;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+a:hover {
+	text-decoration: none;
+	cursor: pointer;
+}
+a:visited {
+	color: black;
+}
+/*LOGOUT BUTTON START*/
+input.logout {
+  background: url('https://dh3vbjnk0bnfa.cloudfront.net/static/centralauth/images/btn-login.png') no-repeat 5px 5px #484b4f;
+  cursor: pointer;
+  border-radius: 50px;
+  padding-left: 30px;
+  margin: 20px 0px 0px 2px;
+  padding: 10px 20px 10px 0;
+  color: White;
+  font-size: 14px;
+  text-align: left;
+  text-indent: 40px;
+  display: block;
+  /*margin: 0 auto;*/
+  /* Animations: */
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-duration: .4s;
+  -webkit-transition-property: all;
+  -moz-transition-timing-function: ease-in-out;
+  -moz-transition-duration: .4s;
+  -moz-transition-property: all;
+}
+input.logout:hover {
+  background-image: url('https://dh3vbjnk0bnfa.cloudfront.net/static/centralauth/images/btn-login-hover.png');
+  background-position: 70px 5px;
+  text-indent: 20px;
+}
+/*LOGOUT BUTTON END*/
+section.invoice_viewer_screen {
+	width: 80%;
+	margin: 0 auto;
+}
+.important_info_red {
+	color: red;
+}
+.important_info_green {
+	color: #4BED00;
+}
+.query {
+	color: green;
+}
+.highlight {
+    color: red;
+}
+.paid_invoices_title, .unpaid_invoices_title {
+    width: 15%;
+    font-weight: bold;
+}
+.paid_invoices_title:hover em,
+.unpaid_invoices_title:hover em{
+    color:dimgrey;
+    cursor: pointer;
+}
+.invoice_list {
+    background-color: white;
+    width: 94%;
+    height: 30em;
+    overflow-y: auto;
+	font-size: 13px;
+    /* This is what makes it float	*/
+    margin: 0 auto;
+    border: 1px solid black;
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+}
+#heading_entry, #paid_heading_entry {
+	width: 94%;
+	background-color: white;
+    overflow-y: auto;
+	font-size: 13px;
+    /* This is what makes it float	*/
+    margin: 0 auto;
+    border: 1px solid black;
+}
+.paid_invoice_section{
+    background-color: white;
+    width: 94%;
+	height: 22em;
+    /* This makes it only scroll on the y axis */
+    overflow-y: auto;
+    /* This is what makes it float	*/
+    margin: 0 auto;
+    border: 1px solid black;
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+}
+.button_container{
+    width: 100%;
+    margin: 0 auto;
+}
+.pay_invoices {
+	float: right;
+	clear: both;
+	color: white;
+	font-size: 18px;
+	background-color: #E46151;
+	margin: 20px 10px 40px 10px;
+	padding: 10px 10px 10px 10px;
+	box-shadow: 2px 2px 2px 2px #000;
+	border-radius: 5px;
+}
+.pay_invoices:hover {
+	background-color: #CF5849;
+	color: black;
+	cursor: default;
+	box-shadow: inset 0px 0px 2px 2px #000;
+}
+.pay_invoices:active {
+	box-shadow: inset 0px 0px 4px 4px #000;
+}
+.heading_entry, .paid_heading_entry, .entry, .paid_entry{
+	width: 100%;
+}
+.entry, .paid_entry{
+	vertical-align: top;
+	float: left;
+	font-family: 'Roboto', sans-serif;
+}
+.invNum, .check, .date, .invHours, .total, .paid, .balance, .status, .actions,
+.invNum_header, .date_header, .total_header, .paid_header, .check_header,
+.balance_header, .invHours_header, .status_header, .actions_header{
+	float: left;
+	padding: 5px 5px 5px 5px;
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 12%;
+	text-align: center;
+}
+.paid_entry .invNum, .paid_entry .check, .paid_entry .date, .paid_entry .invHours,
+.paid_entry .total, .paid_entry .paid, .paid_entry .balance, .paid_entry .status,
+.paid_entry .actions{
+	width: 14.2%;
+}
+#paid_heading_entry .invNum_header, #paid_heading_entry .date_header, #paid_heading_entry .total_header, 
+#paid_heading_entry .paid_header, #paid_heading_entry .balance_header, #paid_heading_entry .invHours_header,
+#paid_heading_entry .status_header {
+	width: 14.28%;
+}
+input.checkBox 
+{
+	margin: 0 auto;
+}
+.invNum, .date, .invHours, .total, .paid, .balance, .status{
+	padding: 10px 0px 10px 1px;
+}
+.invNum, .date, .invHours, .total, .paid, .balance, .status{
+	height: 4.0em;
+	font-size: 15px;
+}
+.invNum_header, .date_header, .total_header, .paid_header, .balance_header,
+.status_header, .invHours_header, .actions_header{
+	/* Padding: top  right bottom left */
+	padding: 10px 0px 12px 2px;
+}
+.actions, .actions_header {
+	width: 16%;
+}
+.actions {
+	padding: 10px 10px 10px 0px;
+}
+.check, .check_header {
+	width: 3%;
+	padding-bottom: 35px;
+	padding-right: 1.2em; 
+}
+.invHours {
+	color: green;
+}
+.check {
+	height: 4.6em;
+}
+.check_header {
+	height: 3.1em;
+}
+.balance, .paid {
+	color: red;
+}
+.btn_pay, .fadeOutBtn_pay{
+	width: 100%;
+	float: left;
+	clear: right;
+	margin: 0px 0px 0px 5px;
+	padding: 10px 0px 10px 0px;
+}
+.btn_pay {
+	box-shadow: 1px 1px 1px 1px #000;
+	border-radius: 5px;
+}
+.fadeOutBtn_pay {
+	border: 1px solid black;
+	border-radius: 5px;
+}
+.fadeOutBtn_pay:hover{
+	cursor: default;
+}
+.btn_pay:hover {
+	cursor: default;
+	color: white;
+	box-shadow: inset 0px 0px 2px 2px #000;
+}
+ .fadeOutBtn_pay {
+	background-color: #C3C2C1;
+}
+.btn_pay {
+	background-color: #E69805;
+}
+.btn_pay:hover {
+	background-color: #BE7E05;
+}
+.btn_pay:active {
+	box-shadow: inset 0px 0px 4px 4px #000;
+}
+.client_name{
+	font-size: 18px;
+	padding: 5px 5px 5px 5px;
+	background-color: #8B8D8E;
+}
+.open_invoice {
+	background-color: #CD2035;
+	color: white;
+}
+.partial_invoice {
+	background-color: #45D6F0;
+}
+.closed_invoice {
+	background-color: #67F045;
+}
+#last_balance {
+	color: green;
+}
+#invoice_info_heading {
+	text-align: center;
+}
+.error {
+	float: left;
+	color: red;
+	padding-top: 3%;
+	padding-left: 18%;
+}
+/*
+	********************************************
+	*										   *
+	*			Payment Tabs Css			   *
+	*										   *
+	********************************************
+*/
+.payment-tabs {
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	width: 100%;
+	font-weight: 300;
+	font-size: 1.25em;
+}
+
+/* Nav */
+.payment-tabs nav {
+	text-align: center;
+}
+
+.payment-tabs nav ul {
+	position: relative;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 1200px;
+	list-style: none;
+	-ms-box-orient: horizontal;
+	-ms-box-pack: center;
+	-webkit-flex-flow: row wrap;
+	-moz-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+}
+
+.payment-tabs nav ul li {
+	position: relative;
+	z-index: 1;
+	display: block;
+	margin: 0;
+	text-align: center;
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+.payment-tabs nav .tab {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	line-height: 2.5;
+}
+
+.payment-tabs nav .tab span {
+	vertical-align: middle;
+	font-size: 0.75em;
+}
+
+.payment-tabs nav li.tab-current{
+	color: #74777b;
+}
+
+.payment-tabs nav .tab:focus {
+	outline: none;
+}
+
+/* Icons */
+.payment-tabs .icon::before {
+	z-index: 10;
+	display: inline-block;
+	margin: 0 0.4em 0 0;
+	vertical-align: middle;
+	text-transform: none;
+	font-weight: normal;
+	font-variant: normal;
+	font-size: 1.3em;
+	font-family: 'stroke7pixeden';
+	line-height: 1;
+	speak: none;
+	-webkit-backface-visibility: hidden;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.payment-tabs .icon-upload::before {
+	content: "\e68a";
+}
+.payment-tabs .icon-tools::before {
+	content: "\e60a";
+}
+.payment-tabs .icon-plane::before {
+	content: "\e625";
+}
+.payment-tabs .icon-joy::before {
+	content: "\e6a4";
+}
+.payment-tabs .icon-plug::before {
+	content: "\e69a";
+}
+.payment-tabs .icon-home::before {
+	content: "\e648";
+}
+.payment-tabs .icon-gift::before {
+	content: "\e652";
+}
+.payment-tabs .icon-display::before {
+	content: "\e65e";
+}
+.payment-tabs .icon-date::before {
+	content: "\e660";
+}
+.payment-tabs .icon-config::before {
+	content: "\e666";
+}
+.payment-tabs .icon-coffee::before {
+	content: "\e669";
+}
+.payment-tabs .icon-camera::before {
+	content: "\e66f";
+}
+.payment-tabs .icon-box::before {
+	content: "\e674";
+}
+
+/* Content */
+.payment-tabs .content-wrap {
+	position: relative;
+}
+
+.payment-tabs .content-wrap section {
+	display: none;
+	margin: 0 auto;
+	padding: 1em;
+	max-width: 1200px;
+	text-align: center;
+}
+
+.payment-tabs .content-wrap section.content-current {
+	display: block;
+}
+
+.payment-tabs .content-wrap section p {
+	margin: 0;
+	padding: 0.75em 0;
+	color: rgba(40,44,42,0.05);
+	font-weight: 900;
+	font-size: 4em;
+	line-height: 1;
+}
+
+/* Fallback */
+.payment-tabs .no-js .content-wrap section {
+	display: block;
+	padding-bottom: 2em;
+	border-bottom: 1px solid rgba(255,255,255,0.6);
+}
+
+.payment-tabs .no-flexbox nav ul {
+	display: block;
+}
+
+.payment-tabs .no-flexbox nav ul li {
+	min-width: 15%;
+	display: inline-block;
+}
+
+@media screen and (max-width: 58em) {
+	.payment-tabs nav a.icon span {
+		display: none;
+	}
+	.payment-tabs nav a:before {
+		margin-right: 0;
+	}
+}
+/*****************************/
+/* Flip */
+/*****************************/
+.tabs-style-flip {
+	max-width: 1200px;
+}
+
+.tabs-style-flip nav a {
+	padding: 0.5em 0;
+	/*color: #2CC185;*/
+	color: #3C77BD;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.tabs-style-flip nav a:hover,
+.tabs-style-flip nav a:focus,
+.tabs-style-flip nav li.tab-current a {
+	/*color: #74777b;*/
+	color: #334674;
+}
+
+.tabs-style-flip nav a span {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	font-size: 0.625em;
+}
+
+.tabs-style-flip nav a::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background-color: #f0f0f0;
+	content: '';
+	-webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
+	transition: transform 0.3s, background-color 0.3s;
+	-webkit-transform: perspective(900px) rotate3d(1,0,0,90deg);
+	transform: perspective(900px) rotate3d(1,0,0,90deg);
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+	-webkit-perspective-origin: 50% 100%;
+	perspective-origin: 50% 100%;
+}
+
+.tabs-style-flip nav li.tab-current a::after {
+	background-color: #fff;
+	-webkit-transform: perspective(900px) rotate3d(1,0,0,0deg);
+	transform: perspective(900px) rotate3d(1,0,0,0deg);
+}
+
+.payment-tabs .content-wrap {
+	background: #fff;
+}
+/*
+	********************************************
+	*										   *
+	*		Payment Notification Css		   *
+	*										   *
+	********************************************
+*/
+.count_dropdown {
+	width: 100%;
+	height: 4em;
+	/*border: 1px solid black;
+	color: white;
+	background-color: #474747;*/
+}
+.count_dropdown .dropdown_text {
+	width: 25%;
+	margin: 0 auto;
+	margin-top: 0.8em;
+	text-align: center;
+}
+.dropdown_text {
+	cursor: pointer;
+}
+.dropdown_text:hover {
+	color: #3A70B0;
+}
+.notification-container {
+	background-color: #474747;   
+	width: 100%;
+	height: 10em;
+	color: #999999;
+	padding-top: 1px;
+}
+.notification-container ul {
+	list-style-type: none;
+	padding-left: 6%;
+}
+.notification-container ul li {
+	background-color: #000000;
+	border-radius: 10px;
+	float: left;
+	margin: 10px 10px 10px 10px;
+	padding: 2% 3% 2% 3%;
+	-webkit-box-shadow: inset 0px 0px 0px 5px rgba(71,71,71,0.75);
+	-moz-box-shadow: inset 0px 0px 0px 5px rgba(71,71,71,0.75);
+	box-shadow: inset 0px 0px 0px 5px rgba(71,71,71,0.75);
+}
+.notification-container ul li div.notification-title {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 10px;
+	font-size: 16px;
+	text-decoration: underline;
+}
+.notification-container ul li div.notification-content {
+	color: white;
+	width: 100%;
+	font-size: 26px;
+}
+.notification-content {
+	font-family: 'Graduate', cursive;
+	font-size: 24px;
+}
+#notification-hours {
+	color: #4A90E2;
+}
+#notification-unpaid {
+	color: red;
+}
+#notification-total {
+	color: white;
+}
+#notification-paid {
+	color: green;
+}
+@media (max-width: 1024px) {
+	/* For notification bar */
+	.notification-container ul {
+		padding-left: 1%;
+		padding-top: 1%;
+	}
+	.notification-container ul li {
+		padding: 2% 2% 2% 2%;
+		margin: 10px 5px 10px 5px;
+	}
+	.notification-container ul li div.notification-title {
+		font-size: 14px;
+	}
+	.notification-container ul li div.notification-content {
+		font-size: 22px;
+	}
+	/* For invoice information */
+
+}
+@media (max-width: 768px) {
+	/* For notification bar */
+	.notification-container ul {
+		padding-left: 2%;
+		padding-top: 3%;
+	}
+	.notification-container ul li {
+		margin: 10px 5px 10px 5px;
+	}
+	.notification-container ul li div.notification-title {
+		font-size: 10px;
+	}
+	.notification-container ul li div.notification-content {
+		font-size: 18px;
+	}   
+	/* For invoice information */
+	.check_header, .check {
+		display: none;
+	}
+	.invNum, .date, .invHours, .total, .paid, .balance, .status{
+		height: 4.0em;
+		font-size: 12px;
+	}
+}
+/* When it gets to this size then the notifications will be in 2 rows 2 on top, 2 on bottom */
+@media (max-width: 425px) {
+	/* For notification bar */
+	.notification-container {
+		height: 14em;
+	}
+	.notification-container ul {
+		padding-left: 4%;
+		padding-top: 2%;
+	}
+	.notification-container ul li {
+		padding: 2% 4% 2% 4%;
+		margin: 10px 10px 10px 10px;
+	}
+}
+@media (max-width: 375px) {
+	.notification-container {
+		height: 14em;
+	}
+	.notification-container ul {
+		padding-left: 2%;
+		padding-top: 2%;
+	}
+	.notification-container ul li {
+		padding: 2% 3% 2% 3%;
+		margin: 10px 5px 10px 5px;
+	}
+	/* For invoice information */
+}
+/*
+	********************************************
+	*										   *
+	*				Testing Css				   *
+	*										   *
+	********************************************
+*/
+div.testing {
+	width: 95%;
+	margin: 0 auto;
+	margin-bottom: 2%; 
+	background: rgba(0, 0, 0, 0.9);
+	color: white;
+}
+/* TABLE TEST CSS */
+/* links */
+.nfl a, .mlb a, .nhl a, .pga a {
+	text-decoration: none;
+	transition: color 0.2s ease-out;
+  }
+  
+  .nfl a {
+	color: #4fc0d2;
+  }
+  
+  .nfl a:hover {
+	color: #268695;
+  }
+  
+  .mlb a {
+	color: #52d29a;
+  }
+  
+  .mlb a:hover {
+	color: #279766;
+  }
+  
+  .nhl a {
+	color: rgba(231, 196, 104, 0.7);
+  }
+  
+  .nhl a:hover {
+	color: rgba(201, 154, 32, 0.7);
+  }
+  
+  .pga a {
+	color: #eb7655;
+  }
+  
+  .pga a:hover {
+	color: #c33d17;
+  }
+  
+  /* lists */
+  .row ul.invoice-content {
+	margin: 0;
+	padding: 0;
+  }
+  
+  .row ul.invoice-content li {
+	margin: 0;
+	font-size: 16px;
+	font-weight: normal;
+	list-style: none;
+	display: inline-block;
+	width: 16%;
+	box-sizing: border-box;
+  }
+  @media only screen and (max-width: 767px) and (min-width: 480px) {
+	.row ul li {
+	  font-size: 13px;
+	}
+  }
+  @media only screen and (max-width: 479px) {
+	.row ul li {
+	  font-size: 13px;
+	}
+  }
+  
+  .title ul li {
+	padding: 25px 13px;
+  }
+  
+  .row ul li {
+	padding: 5px 10px;
+  }
+  
+  /* rows */
+  .row {
+	padding: 20px 0;
+	height: 60px;
+	font-size: 0;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.2s ease-out;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .row:hover {
+	background-color: rgba(26, 26, 26, 0.9);
+	height: 120px;
+  }
+  @media only screen and (max-width: 767px) {
+	.row:hover {
+	  height: 85px;
+	}
+  }
+  @media only screen and (max-width: 359px) {
+	.row:hover {
+	  height: 105px;
+	}
+  }
+  
+  .title {
+	/* padding: 25px 0 5px 0; */
+	height: 60px;
+	font-size: 0;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-left: 3px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .title:hover {
+	height: 45px;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-left: 3px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  @media only screen and (max-width: 767px) {
+	.title-hide {
+	  display: none;
+	}
+  }
+  
+  .nfl {
+	border-left: 3px solid #1c616c;
+  }
+  
+  .nfl:hover {
+	border-left: 3px solid #4fc0d2;
+  }
+  
+  .mlb {
+	border-left: 3px solid #1d6e4b;
+  }
+  
+  .mlb:hover {
+	border-left: 3px solid #52d29a;
+  }
+  
+  .nhl {
+	border-left: 3px solid rgba(157, 121, 25, 0.7);
+  }
+  
+  .nhl:hover {
+	border-left: 3px solid rgba(231, 196, 104, 0.7);
+  }
+  
+  .pga {
+	border-left: 3px solid #952f12;
+  }
+  
+  .pga:hover {
+	border-left: 3px solid #eb7655;
+  }
+  
+  /* row one - fadeIn */
+  .row-fadeIn-wrapper {
+	opacity: 0;
+	font-size: 0;
+	height: 0;
+	overflow: hidden;
+	position: relative;
+	transition: all 0.2s ease-out;
+	animation: fadeIn 0.4s ease-out 2s 1 alternate;
+	animation-fill-mode: forwards;
+  }
+  
+  .row-fadeIn-wrapper:hover {
+	height: 35px;
+  }
+  @media only screen and (max-width: 767px) {
+	.row-fadeIn-wrapper:hover {
+	  height: 55px;
+	}
+  }
+  @media only screen and (max-width: 359px) {
+	.row-fadeIn-wrapper:hover {
+	  height: 75px;
+	}
+  }
+  
+  .fadeIn {
+	padding: 20px 0;
+	font-size: 0;
+	position: absolute;
+	transition: all 0.2s ease-out;
+	width: 100%;
+  }
+  
+  .fadeIn:hover {
+	background-color: rgba(26, 26, 26, 0.9);
+  }
+  
+  /* row two - fadeOut */
+  .row-fadeOut-wrapper {
+	font-size: 0;
+	overflow: hidden;
+	position: relative;
+	transition: all 0.2s ease-out;
+	animation: fadeOut 0.4s ease-out 8s 1 alternate;
+	animation-fill-mode: forwards;
+	opacity: 1;
+	height: 65px;
+  }
+  
+  .row-fadeOut-wrapper:hover {
+	height: 100px;
+  }
+  
+  /* update content */
+  .update-row {
+	animation: update 0.5s ease-out 12s 1 alternate;
+  }
+  
+  .update1 {
+	position: absolute;
+	top: 25px;
+	display: inline-block;
+	opacity: 1;
+	animation: update1 1s ease-out 12s 1 alternate;
+	animation-fill-mode: forwards;
+  }
+  
+  .update2 {
+	position: absolute;
+	top: 25px;
+	display: inline-block;
+	opacity: 0;
+	animation: update2 4s ease-out 13s 1 alternate;
+	animation-fill-mode: forwards;
+  }
+  
+  /* more content */
+  ul.more-content li {
+	position: relative;
+	top: 8px;
+	font-size: 13px;
+	margin: 0;
+	padding: 10px 13px;
+	display: block;
+	height: 50px;
+	width: 100%;
+	color: rgba(128, 128, 128, 0.9);
+  }
+  @media only screen and (max-width: 767px) {
+	ul.more-content li {
+	  font-size: 11px;
+	}
+  }
+  
+  /* small content */
+  .small {
+	color: rgba(102, 102, 102, 0.9);
+	font-size: 10px;
+	padding: 0 10px;
+	margin: 0;
+  }
+  @media only screen and (max-width: 767px) {
+	.small {
+	  display: none;
+	}
+  }
+  
+  /* keyframe animations */
+  @keyframes fadeIn {
+	from {
+	  background: rgba(255, 255, 255, 0.1);
+	  opacity: 0;
+	  padding: 0;
+	}
+	to {
+	  background: rgba(51, 51, 51, 0.1);
+	  opacity: 1;
+	  padding: 0 0 65px 0;
+	}
+  }
+  @keyframes fadeOut {
+	from {
+	  background: rgba(51, 51, 51, 0.1);
+	  opacity: 1;
+	  height: 65px;
+	}
+	to {
+	  background: rgba(255, 255, 255, 0.1);
+	  opacity: 0;
+	  height: 0;
+	}
+  }
+  @keyframes update {
+	0% {
+	  background: rgba(51, 51, 51, 0.1);
+	}
+	50% {
+	  background: rgba(255, 255, 255, 0.1);
+	}
+	100% {
+	  background: rgba(51, 51, 51, 0.1);
+	}
+  }
+  @keyframes update1 {
+	0% {
+	  opacity: 0;
+	}
+	0% {
+	  opacity: 1;
+	}
+	100% {
+	  opacity: 0;
+	}
+  }
+  @keyframes update2 {
+	0% {
+	  opacity: 0;
+	  color: rgba(255, 255, 255, 0.9);
+	}
+	20% {
+	  opacity: 1;
+	  color: #52d29a;
+	}
+	100% {
+	  opacity: 1;
+	  color: rgba(255, 255, 255, 0.9);
+	}
+  }  

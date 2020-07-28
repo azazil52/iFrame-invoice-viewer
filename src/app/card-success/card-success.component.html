@@ -1,0 +1,24 @@
+<a routerLink="/login">
+  <input type="button" value="Log out" class="logout" />
+</a>
+
+<div class="master_payment_div" [@fadeInAnimation]>
+	<section class="content">
+		<div class="container extra-bot extra-top">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="portal-heading">Client Payment Portal</h1>
+					<ul class="portal-list">
+						<li class="final">invoice details <i class="fa fa-check-circle-o"></i></li>
+						<li class="final">Monthly Payment details <i class="fa fa-check-circle-o"></i></li>
+						<li class="final">review <i class="fa fa-check-circle-o"></i></li>
+					</ul>
+				</div>
+				<div class="col-md-12">
+					<span class="form-title portal" style="margin-bottom:10px;">Thank You!</span>
+					<div class="alert alert-success"> Your payment has been successfully processed <a routerLink="/invoice" class="alert-link">Click here to make another payment.</a></div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

@@ -1,0 +1,106 @@
+
+<div class="back_btn">
+  <a routerLink="/invoice">Back</a>
+</div>
+
+<a routerLink="/">
+  <input type="button" value="Log out" class="logout" />
+</a>
+
+<section class="content gray" id="mobileVersion" [@fadeInAnimation]>  
+  <div id="master_container" class="container">
+      <div class="col-md-12">
+      		<div class="master_title"><b>Payment Options</b></div>
+      		<div class="general_description_section">
+          		<div class="master_description">
+          			<br>Your invoice total is: <b class="red_highlight">$</b>
+          			<br><br>You can pay upfront now or lodge an application to pay in 3 month installments
+          			<br><br>Click on the payment option below that you would like to use. 
+          		</div>
+      		</div>
+      </div>
+      <div class="col-md-12">
+      		<div class="payment_options">
+      			<div class="pay_now_section">
+      				<div class="sub_title"><br><h3><b>Pay Now</b></h3></div>
+      				
+      				<form id="mobileCardForm" action="" method="POST">
+      					
+      					<div class="credit_card_box" id="mobile_credit_card_option">
+          					<div class="inner_box_icon"><i class="fa fa-credit-card fa-3x" aria-hidden="true"></i></div>
+          					<div class="inner_box_text">Credit Card</div>
+          					<div class="inner_box_amount"><b class="green_highlight">$</b></div>
+          					<input type="text" name="paymentInfo" value="" hidden> 
+          				</div>
+          				
+          				<div class="direct_debit_box" id="mobile_debit_card_option">
+          					<div class="inner_box_icon"><i class="fa fa-money fa-3x" aria-hidden="true"></i></div>
+          					<div class="inner_box_text">Direct Debit</div>
+          					<div class="inner_box_amount"><b class="green_highlight">$</b></div>
+          					<input type="text" name="paymentInfo" value="" hidden>
+          				</div>
+          			
+          			</form>
+      			</div>
+      			<br>
+      			<div class="pay_later_section">
+      				<div class="sub_title"><br><h3><b>Pay Monthly</b></h3></div>
+      				
+      				<form id="mobileMonthlyForm" action="" method="POST">
+          				
+          				<div class="credit_card_box" id="mobile_debit_monthly_pay_option">
+          					<div class="inner_box_icon"><i class="fa fa-credit-card fa-3x" aria-hidden="true"></i></div>
+          					<div class="inner_box_text">Credit Card</div>
+          					<div class="inner_box_amount"><b class="green_highlight">$</b></div>
+          					<input type="text" name="paymentInfo" value="" hidden> 
+          				</div>
+          				
+          			</form>
+      			</div>
+      		</div>
+      </div>
+	  </div>
+</section>
+
+<section class="content white" id="desktopVersion" [@fadeInAnimation]>
+	<div class="container">
+		<div class="col-md-12">
+			<div id="admin-table" class="clear">
+			    
+			    <form id="desktopCardForm" action="#" method="POST">
+
+				    <div class="plan" id="most-popular" (click)="quickfeePopBox()">
+				        <h3>Quickfee Payment<span><img src="../../assets/pics/quickfee.png" width="140px" alt="ach"></span></h3>
+				        <a class="signup" id="desktop_credit_card_option" (click)="quickfeePopBox()">Enter</a>
+				        <input type="text" name="paymentInfo" value="" hidden>          
+				        <ul>
+				            <li><b>Description: </b> <b class="important_info_green">For clients wanting to pay in full by bank transfer</b> </li>
+				            <li><b class="important_info_red">{{ first_monthly_installment | currency:'USD':true:'1.2-2'}}</b></li>		
+				        </ul> 
+				    </div>
+
+				    <div class="plan" (click)="achPopBox()">
+				        <h3>Pay Now-<br> ACH<span><img src="../../assets/pics/ach.png" width="140px" alt="ach"></span></h3>
+						<a class="signup" id="desktop_debit_monthly_pay_option" (click)="achPopBox()">Enter</a>
+						<input type="text" name="paymentInfo" value="" hidden> 
+				        <ul>
+				            <li><b>Description: </b> For clients wanting to pay monthly by bank transfer, <b class="important_info_green">No Fees!</b></li>
+				            <li><b class="important_info_red">{{ invoice_total | currency:'USD':true:'1.2-2'}}</b></li>		
+				        </ul>
+					</div>
+
+					<div class="plan" (click)="creditCardPopBox()">
+						<h3>Pay Now- Credit Card<span><img src="../../assets/pics/cc.png" width="140px" alt="ach"></span></h3>
+						<a class="signup" id="desktop_debit_card_option" (click)="creditCardPopBox()">Enter</a>
+						<input type="text" name="paymentInfo" value="" hidden>        
+						<ul>
+							<li><b>Description: </b> Use your credit card for only a <b class="important_info_red">3% surcharge</b></li>
+							<li><b class="important_info_red">{{ invoice_total | currency:'USD':true:'1.2-2'}}</b></li>		
+						</ul>    
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
