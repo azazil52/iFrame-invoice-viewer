@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
 
-The program can be run from the root folder by using the command <ng serve> which will fire up the application at localhost:4200
+The program can be run from the root folder by using the command (ng serve) which will fire up the application at localhost:4200
 
 -   This application primarily serves as a sandbox to experiment with diffent ways of controlling the flow of information through the app.
 -   The purpose of the project was to mock up an application that would allow login and registration that would then be connected to the 
